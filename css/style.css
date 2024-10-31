@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+}
+
+:root {
+    --font-family: "Black Ops One", system-ui;
+    --font-size: ;
+    --black: #0D0D0D;
+    --laranja-forte:#F22727;
+    --laranja-medio:#F26E22;
+    --laranja-fraco:#F2911B;
+    --amarelo: #F2CB05;
+
+}
+
+
+#jogo {
+    height: 100vh;
+}
+
+
+/* div que exibe e luta e plcar */
+.arena {
+   height: calc(100vh - 255px);
+    display: flex;
+    flex-direction: column;
+    background-image: url("../img/vila22.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+
+/* div pai do placar que contem os placarres */
+.placar {
+    display: flex;
+}
+
+
+/* div do placar do  lutador */
+.l1Plc,
+.l2Plc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    /* background-color: aliceblue; */
+}
+
+
+
+/* img do perfil no plcar */
+.imgPerfil {
+    height: 100px;
+    width: 100px;
+    border: solid 2px var(--black);
+    border-radius: 50%;
+    margin: 5px;
+}
+
+
+
+/* div pai da barra de vida */
+.l1paiVida,
+.l2paiVida { 
+    height: 20px;
+    width: 100%;
+    border: solid 3px var(--black);
+    border-radius: 11px;
+    background-color: var(--laranja-forte);
+}
+
+/* div filha da barra de vida */
+.l1Vida,
+.l2Vida {
+    border-radius: 10px;
+    height: 100%;
+    background-color: var(--amarelo);
+}
+
+
+/* div e conteudos que ira exibir as informaçoes do lutador 1 e 2 tipo nome forca etc... */
+.l1info {
+    margin: 0px 10px;
+    display: flex;
+    gap: 2rem;
+    justify-content: right;
+    align-items: center;
+    
+}
+
+.l1info div,
+.l2info div {
+    white-space: nowrap;
+}
+
+.l1info span,
+.l2info span{
+    font-size: 20px;
+    color: white;
+}
+
+.l1info img,
+.l2info
+ img{
+    height: 22px;
+}
+
+
+/* div que ira exibri as informaçoes do lutador 2 com nome forca  etc.. */
+.l2info {
+    margin: 0px 10px;
+    display: flex;
+    gap: 2rem;
+    justify-content: left;
+    align-items: center;
+}
+
+
+
+/* div que exibe o plcar e da restart no jogo */
+.placarpt {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+
+/* placar da luta  */
+.pontos {
+    color: var(--laranja-medio);
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+
+/* botao de restart */
+.reset {
+    border: solid 3px var(--laranja-forte);
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 5px;
+    color: var(--laranja-forte);
+    background-color: rgba(0, 0, 0, 0.385);
+    cursor: pointer;
+    
+}
+
+
+
+
+
+
+
+
+
+/* section que ira exibir os bonecos lutando */
+.luta {
+    height: 270px;
+    display: flex;
+    padding: 0px 150px;
+    width: 100%;
+    justify-content: center;
+    align-items: end;
+
+}
+
+/* div pai das imgs dos bonecos e do botao de atacar */
+.l1luta,
+.l2luta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.l1luta img,
+.l2luta img {
+height: 180px;
+transition: all 0.5s ease;
+}
+
+/* efieto que e ativado no js pra fazer o ataque */
+.l1Ataca {
+    transform: translate(400px, 0);
+}
+
+.l2ataca {
+    transform: translate(-400px, 0);
+}
+
+
+/* botoes de ataque */
+.l1botao,
+.l2botao {
+    font-size: 20px;
+    padding: 5px;
+    border: solid 2px var(--laranja-forte);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.537);
+    color:var(--laranja-forte);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* comeco da parte do resultado e narrador */
+
+
+
+/* div que ira exibir os resultado */
+.resultado {
+    display: flex;
+    height: 250px;
+}
+
+
+
+.lgdLuta {
+    padding: 10px;
+    width: 100%;
+    background-color:var(--black);
+    overflow-y: auto;
+    height: 250px;
+}
+
+
+
+.clasLi {
+    color: var(--laranja-medio);
+    font-size: 20px;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+
+.gif-narrador{
+    height: 250px;
+    width: 300px;
+}
+
+.gif-narrador img {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+#audios {
+display: none;
+}

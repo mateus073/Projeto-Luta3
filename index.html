@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>projeto luta - chaves</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main id="jogo">
+        <!-- div principal que ira pegar a arena de luta completa placar e personagens lutando -->
+        <div class="arena">
+
+            <!-- section que armazena o placar dos dois lutadores -->
+            <section class="placar">
+
+                <!-- informacoes gerias sobre lutador 1 -->
+                <div class="capaPlay1"><img src="img/perfil-madruga.jpg" alt="" class="imgPerfil"></div>
+                <!--foto de perfil do lutador 1 -->
+
+                <div class="l1Plc">
+
+                    <div class="l1paiVida">
+                        <div class="l1Vida" style="width: 10%;"></div> <!-- barra de vida  do l1-->
+                    </div>
+
+                    <!-- informaçoes do lutador 1 -->
+                    <div class="l1info">
+                        <div class="l1hp"> <img src="img/coracao.png" alt="">    <span class="l1HP">01</span>     </div>
+                        <div class="l1defesa"> <img src="img/de-madeira.png" alt="">    <span class="l1D">01</span>    </div>
+                        <div class="l1forca"> <img src="img/espadas (1).png" alt="">     <span class="l1F">01</span>   </div>
+                        <div class="l1nome" style="font-size: 20px; color: white;">play 1</div>
+                    </div>
+                </div>
+
+                <!-- div que mostra o placar -->
+                <div class="placarpt">
+                    <div class="pontos">
+                        <span class="play1pt">0</span> x <span class="play2pt">0</span>
+                    </div>
+                    <div class="reset">RESTART</div>
+                </div>
+
+
+                <!-- informaçoes gerais do lutador 2 -->
+                <div class="l2Plc">
+
+                    <div class="l2paiVida">
+                        <div class="l2Vida" style="width: 10%;"></div> <!-- barra de vida  do l1-->
+                    </div>
+
+                    <div class="l2info">
+                        <div class="l2nome" style="font-size: 20px; color:white;">play 2</div>
+                        <div class="l2hp"> <img src="img/coracao.png" alt=""> <span class="l2HP">01</span> </div>
+                        <div class="l2defesa"> <img src="img/de-madeira.png" alt="" > <span class="l2D">01</span> </div>
+                        <div class="l2forca"> <img src="img/espadas (1).png" alt=""> <span class="l2F">01</span> </div>
+                    </div>
+                </div>
+
+                <div class="capaPlay2"><img src="img/perfil-chaves.jpg" alt="" class="imgPerfil"></div>
+                <!--foto de perfil do lutador 2 -->
+
+            </section>
+
+
+            <!-- section que armazena o cenario da luta -->
+            <section class="luta">
+
+                <!-- div img e botao do lutador 1 -->
+                <div class="l1luta">
+                    <div class="l1divImg">
+                        <img src="img/seu-madruga.gif" alt="" class="l1img">
+                    </div>
+                    <button class="l1botao">ATACAR</button>
+                </div>
+
+                <!-- div img e botao do lutador 2 -->
+                <div class="l2luta">
+                    <div class="l2divImg">
+                        <img src="img/mugen-chaves-ezgif.com-rotate.gif" alt="" class="l2img">
+                    </div>
+                    <button class="l2botao">ATACAR</button>
+                </div>
+            </section>
+        </div>
+
+
+
+        <!-- div que contem a ul que vai exibindo informaçoes da luta e o gif do narrador -->
+        <div class="resultado">
+            <div class="lgdLuta">
+                <ul class="ulLengenda">
+                    <li class="clasLi">legena da narraçao da luta</li>
+
+                </ul>
+            </div>
+
+
+            <div class="gif-narrador">
+                <img src="img/cadeirada-apresentador.gif" alt="">
+            </div>
+
+
+            <div id="audios">
+                <!-- controls exibe os controles do audio pra dar play -->
+                <audio id="pancada">
+                    <!-- colocamos o arquivo de audio aqui e seu type -->
+                    <source src="audios/pancada.mp3" type="audio/mp3">
+                </audio>
+                
+                <audio id="rocky">
+                    <!-- colocamos o arquivo de audio aqui e seu type -->
+                    <source src="audios/rocky.mp3" type="audio/mp3">
+                </audio>
+
+                <audio id="teDouOutra">
+                    <!-- colocamos o arquivo de audio aqui e seu type -->
+                    <source src="audios/dou-outra.mp3" type="audio/mp3">
+                </audio>
+
+                <audio id="receba">
+                    <!-- colocamos o arquivo de audio aqui e seu type -->
+                    <source src="audios/receba.mp3" type="audio/mp3">
+                </audio>
+
+                <audio id="astucia">
+                    <!-- colocamos o arquivo de audio aqui e seu type -->
+                    <source src="audios/astucia1.mp3" type="audio/mp3">
+                </audio>
+               
+                <audio id="fight">
+                    <!-- colocamos o arquivo de audio aqui e seu type -->
+                    <source src="audios/fight.mp3" type="audio/mp3">
+                </audio>
+
+                <audio id="gameOver">
+                    <!-- colocamos o arquivo de audio aqui e seu type -->
+                    <source src="audios/gameOver2.mp3" type="audio/mp3">
+                </audio>
+
+                
+
+            </div>
+        </div>
+    </main>
+
+
+
+</body>
+<script src="js/classes2.js"></script>
+<script src="js/script2.js"></script>
+
+</html>
